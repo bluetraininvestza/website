@@ -1,82 +1,28 @@
-// ================= NAVBAR MENU TOGGLE =================
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
+/* ================= MOBILE NAV ================= */
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
+toggle.addEventListener('click', () => {
     nav.classList.toggle('open');
-    menuToggle.classList.toggle('open'); // optional for icon change
+    toggle.classList.toggle('active');
 });
 
-// ================= HEADER SCROLL EFFECT =================
-const header = document.querySelector('.site-header');
-
-window.addEventListener('scroll', () => {
-    if(window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
-// ================= HERO ANIMATION =================
-const heroContent = document.querySelector('.hero-content');
-
+/* ================= HERO ANIMATION ================= */
 window.addEventListener('load', () => {
-    if(heroContent) {
-        heroContent.classList.add('active'); // add active class for fade-in
-    }
+    document.querySelector('.hero-text').classList.add('show');
+    document.querySelector('.hero-image').classList.add('show');
 });
 
-// ================= SCROLL REVEAL =================
-const revealElements = document.querySelectorAll('.reveal');
+/* ================= SCROLL REVEAL ================= */
+const revealItems = document.querySelectorAll('.service-card');
 
 function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    revealElements.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        if(elementTop < windowHeight - 100) { // 100px before element enters view
-            el.classList.add('active');
+    revealItems.forEach(item => {
+        const rect = item.getBoundingClientRect().top;
+        if (rect < window.innerHeight - 80) {
+            item.classList.add('show');
         }
     });
 }
 
-// Initial call and on scroll
 window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-
-// ================= STATS COUNTER =================
-const counters = document.querySelectorAll('.stat span');
-
-function runCounters() {
-    counters.forEach(counter => {
-        const target = +counter.getAttribute('data-count');
-        const current = +counter.innerText;
-
-        const increment = Math.ceil(target / 100); // adjust speed
-
-        if(current < target) {
-            counter.innerText = Math.min(current + increment, target);
-            setTimeout(runCounters, 20);
-        } else {
-            counter.innerText = target;
-        }
-    });
-}
-
-// Trigger counters only if in viewport
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom >= 0;
-}
-
-function checkCounters() {
-    counters.forEach(counter => {
-        if(isElementInViewport(counter) && !counter.classList.contains('counted')) {
-            counter.classList.add('counted'); // avoid re-running
-            runCounters();
-        }
-    });
-}
-
-window.addEventListener('scroll', checkCounters);
-window.addEventListener('load', checkCounters);
