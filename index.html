@@ -4,43 +4,84 @@
     <title>BTI | Construction & Infrastructure</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blue Train Investment (BTI) is a trusted South African construction and infrastructure company delivering reliable, compliant, and innovative building solutions since 2016.">
-    <meta name="keywords" content="construction, infrastructure, residential construction, commercial projects, BTI, South Africa">
-    <meta name="author" content="Blue Train Investment">
+    <meta name="description" content="Blue Train Investment is a professional construction and infrastructure company delivering quality projects across South Africa since 2016.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= BIG BANNER / HERO ================= -->
-<section class="hero" style="background-image: url('banner.jpg');">
+<!-- ================= HERO HEADER ================= -->
+<header class="bti-hero">
 
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="logo">
-            <h1>Blue Train Investment</h1>
+    <!-- NAVBAR -->
+    <nav class="bti-nav">
+        <div class="logo">BTI</div>
+
+        <ul class="nav-links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-
-        <nav class="nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html" class="nav-cta">Contact</a>
-            <a href="Company Profile.docx" class="btn primary" target="_blank">Company Profile</a>
-        </nav>
-    </header>
+    </nav>
 
     <!-- HERO CONTENT -->
-    <div class="hero-content">
-        <h1>Building Infrastructure That Moves Communities Forward</h1>
-        <p>
-            Reliable, compliant, and innovative construction solutions for residential,
-            commercial, and industrial projects since 2016.
-        </p>
+    <div class="hero-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="hero-text">
+            <span class="tagline">LET’S BUILD THE FUTURE</span>
+            <h1>
+                We Are a Trusted <br>
+                <span>Construction & Infrastructure</span> Partner
+            </h1>
+            <p>
+                Blue Train Investment delivers reliable, compliant and cost-effective
+                construction solutions for residential, commercial and infrastructure
+                projects across South Africa.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn primary">Request a Quote</a>
+                <a href="services.html" class="btn secondary">Our Services</a>
+            </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="hero-image">
+            <img src="banner.jpg" alt="BTI Construction Project">
+        </div>
+
     </div>
 
-    <div class="scroll-indicator"></div>
+    <!-- SERVICES STRIP -->
+    <div class="hero-services">
+        <div class="service-card">
+            <h3>01</h3>
+            <p>Residential Construction</p>
+        </div>
+        <div class="service-card">
+            <h3>02</h3>
+            <p>Commercial Buildings</p>
+        </div>
+        <div class="service-card">
+            <h3>03</h3>
+            <p>Infrastructure Projects</p>
+        </div>
+        <div class="service-card">
+            <h3>04</h3>
+            <p>Renovations & Upgrades</p>
+        </div>
+    </div>
 
-</section>
+</header>
+
+<script src="script.js"></script>
 
 <!-- ================= MAIN CONTENT ================= -->
 <main>
@@ -224,6 +265,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
