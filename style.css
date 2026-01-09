@@ -121,3 +121,71 @@ footer {
     padding: 20px;
 
 }
+
+/* ================= ANIMATIONS ================= */
+
+.hero-text,
+.hero-image {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.hero-text.show,
+.hero-image.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Service cards */
+.service-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+}
+
+.service-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= MOBILE NAV ================= */
+
+.nav-links {
+    transition: 0.3s ease;
+}
+
+@media (max-width: 900px) {
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background: #f4f6f8;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0;
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .menu-toggle span {
+        transition: 0.3s;
+    }
+}
+
