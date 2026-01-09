@@ -26,9 +26,8 @@ header {
 }
 
 .logo svg {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 .logo h1 {
@@ -120,4 +119,5 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+
 }
